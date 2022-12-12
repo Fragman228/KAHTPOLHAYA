@@ -13,7 +13,9 @@ class Themes:
 
     def shift_one(self, addtheme1):
         self.addtheme1 = addtheme1
-        self.themlst = self.themelst.append(addtheme1)
+        self.themelst = self.themelst[::-1]
+        self.themelst.append(addtheme1)
+        self.themelst = self.themelst[::-1]
         return self.themelst
 
     def reversed_order(self):
